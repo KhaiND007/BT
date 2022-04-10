@@ -31,15 +31,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String a = edA.getText().toString();
                 int b = Integer.parseInt(a);
-                if(radio13.isChecked())
-                    kq = b * 13/100;
-                    Toast.makeText(MainActivity.this, "Your tip will be $"+kq, Toast.LENGTH_SHORT).show();
-                if(radio15.isChecked())
-                    kq = b * 15/100;
-                Toast.makeText(MainActivity.this, "Your tip will be $"+kq, Toast.LENGTH_SHORT).show();
-                if(radio18.isChecked())
-                    kq = b * 18/100;
-                Toast.makeText(MainActivity.this, "Your tip will be $"+kq, Toast.LENGTH_SHORT).show();
+                if(radio13.isChecked()) {
+                    kq = b * 13 / 100;
+                    Toast.makeText(MainActivity.this, "Your tip will be $" + kq, Toast.LENGTH_SHORT).show();
+                }
+                else
+                     if(radio15.isChecked()) {
+                         kq = b * 15/100;
+                         Toast.makeText(MainActivity.this, "Your tip will be $"+kq, Toast.LENGTH_SHORT).show();
+                     }
+                     else
+                     if(radio18.isChecked()) {
+                         kq = b * 18/100;
+                         Toast.makeText(MainActivity.this, "Your tip will be $"+kq, Toast.LENGTH_SHORT).show();
+                     }
             }
         });
     }

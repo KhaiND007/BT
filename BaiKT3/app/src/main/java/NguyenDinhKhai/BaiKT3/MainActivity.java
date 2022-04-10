@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter adapter;
     EditText vt, gt;
     Button btnThem, btnSua, btnXoa;
+    int vitri;
+    String giatri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +42,41 @@ public class MainActivity extends AppCompatActivity {
         listData.add("OS");
         listData.add("Preference");
 
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listData);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listData);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
+                vt.setText(i);
+                gt.setText(listData.get(i));
+                vitri = i;
+            }
+        });
+
+        btnThem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                giatri = gt.getText().toString();
+                listData.add(giatri);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+        btnSua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                giatri = gt.getText().toString();
+                listData.set(vitri, giatri);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+        btnXoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listData.remove(vitri);
+                adapter.notifyDataSetChanged();
             }
         });
     }

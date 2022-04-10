@@ -12,24 +12,33 @@
         android:layout_height="wrap_content"
         android:textSize="28sp"
         android:id="@+id/edA"/>
-    <RadioButton
+    <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="13%"
-        android:textSize="28sp"
-        android:id="@+id/radio13"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="15%"
-        android:textSize="28sp"
-        android:id="@+id/radio15"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="18%"
-        android:textSize="28sp"
-        android:id="@+id/radio18"/>
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13%"
+            android:textSize="28sp"
+            android:checked="true"
+            android:id="@+id/radio13"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:textSize="28sp"
+            android:id="@+id/radio15"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18%"
+            android:textSize="28sp"
+            android:id="@+id/radio18"
+            tools:ignore="HardcodedText" />
+
+    </RadioGroup>
 
     <Button
         android:layout_width="wrap_content"

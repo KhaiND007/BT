@@ -50,25 +50,35 @@
             android:layout_height="wrap_content"
             android:text="Lưu thêm"
             android:textSize="22sp"
+            android:textColor="@color/black"
             android:id="@+id/btnThem"
             android:layout_marginStart="8sp"
+            android:backgroundTint="@color/teal_200"
             tools:ignore="HardcodedText" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lưu sửa"
             android:textSize="22sp"
+            android:textColor="@color/black"
             android:id="@+id/btnSua"
             android:layout_marginStart="8sp"
+            android:backgroundTint="@color/teal_200"
             tools:ignore="HardcodedText" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Xóa"
             android:textSize="22sp"
+            android:textColor="@color/black"
             android:id="@+id/btnXoa"
             android:layout_marginStart="8sp"
+            android:backgroundTint="@color/teal_200"
             tools:ignore="HardcodedText" />
-
     </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv"/>
 </LinearLayout>

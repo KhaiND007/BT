@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                vt.setText(i);
-                gt.setText(listData.get(i));
+                gt.setText(listData.get((int) l));
+                vt.setText(""+i);
                 vitri = i;
             }
         });
